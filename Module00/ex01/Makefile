@@ -1,5 +1,5 @@
 NAME = phonebook
-SRC = PhoneBook.cpp PhoneBook.hpp Contact.cpp Contact.hpp main.cpp
+SRC = Contact.cpp Contact.hpp main.cpp PhoneBook.cpp PhoneBook.hpp
 
 CC = g++
 CFLAGS = -Wall -Wextra -Werror
@@ -7,7 +7,7 @@ CFLAGS = -Wall -Wextra -Werror
 all: $(NAME)
 
 $(NAME): $(SRC)
-	$(CC) $(CFLAGS) $(SRC) -o $(NAME)
+	$(CC) $(CFLAGS) $(SRC)
 
 clean:
 	rm -rf $(NAME)

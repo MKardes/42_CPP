@@ -1,51 +1,51 @@
 #include "Contact.hpp"
 
-void	set_name(string s)
+void	Contact::set_name(std::string s)
 {
-	name=s;
+	this->name=s;
 }
 
-void    set_surname(string s)
+void    Contact::set_surname(std::string s)
 {
-        surname=s;
+	this->surname=s;
 }
 
-void    set_nickname(string s)
+void    Contact::set_nickname(std::string s)
 {
-        nickname=s;
+	this->nickname=s;
 }
 
-void    set_num(int n)
+void    Contact::set_num(std::string n)
 {
-        number=n;
+	this->number=n;
 }
 
-void    set_secret(string s)
+void    Contact::set_secret(std::string s)
 {
-        dark_scrt=s;
+	this->dark_scrt=s;
 }
 
-string	get_name(void)
+std::string	Contact::get_name(void)
 {
-	return (name);
+	return (this->name);
 }
 
-string  get_surname(void)
+std::string  Contact::get_surname(void)
 {
-        return (surname);
+	return (this->surname);
 }
 
-string  get_nickname(void)
+std::string  Contact::get_nickname(void)
 {
-        return (nickname);
+	return (this->nickname);
 }
 
-string  get_secret(void)
+std::string  Contact::get_secret(void)
 {
-        return (dark_scrt);
+	return (this->dark_scrt);
 }
 
-int 	get_num(void)
+std::string	Contact::get_num(void)
 {
-        return (number);
+	return (this->number);
 }
