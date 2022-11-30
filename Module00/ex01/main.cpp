@@ -1,4 +1,5 @@
 #include "Contact.hpp"
+#include "PhoneBook.hpp"
 
 int main (void)
 {
@@ -15,9 +16,9 @@ int main (void)
 		std::cout << "Command: ";
 		std::cin >> s;
 		if (s == "ADD")
-			ph.add;
+			ph.add();
 		else if (s == "SEARCH")
-			std::cout << "abi bu";
+			ph.search();
 		else if (s[0] == '\n')
 			continue ;
 		else if (s == "EXIT")

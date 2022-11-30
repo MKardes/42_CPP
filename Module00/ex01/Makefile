@@ -7,7 +7,7 @@ CFLAGS = -Wall -Wextra -Werror
 all: $(NAME)
 
 $(NAME): $(SRC)
-	$(CC) $(CFLAGS) $(SRC)
+	$(CC) $(CFLAGS) $(SRC) -o $(NAME)
 
 clean:
 	rm -rf $(NAME)
