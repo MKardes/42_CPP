@@ -1,17 +1,16 @@
 #include <iostream>
-#include "Zombie.hpp"
 
 int main()
 {
-	Zombie *a = newZombie("Musab");
-	Zombie *b = newZombie("Hafsa");
-	Zombie *c = newZombie("Apo");
+	char		s[] = "HI THIS IS BRAIN";
+	char		*stringPTR = s;
 
-	a->announce();
-	b->announce();
-	c->announce();
-	randomChump("Gulcin");
-	delete a;
-	delete b;
-	delete c;
+	std::string	str = "HI THIS IS BRAIN";
+	std::string	&stringREF = str;
+
+	std::cout << "Ptr for stringPTR: " << &stringPTR << std::endl;
+	std::cout << "Ptr for stringREF: " << &stringREF << std::endl;
+
+	std::cout << "Value for stringPTR: " << stringPTR << std::endl;
+        std::cout << "Value for stringREF: " << stringREF << std::endl;
 }

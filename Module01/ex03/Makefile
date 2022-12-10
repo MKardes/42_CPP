@@ -1,5 +1,5 @@
-NAME = brain
-SRC = main.cpp
+NAME = violence
+SRC = Weapon.cpp main.cpp HumanA.cpp HumanB.cpp
 
 CC = g++
 CFLAGS = -Wall -Wextra -Werror
@@ -8,9 +8,6 @@ all: $(NAME)
 
 $(NAME): $(SRC)
 	$(CC) $(CFLAGS) $(SRC) -o $(NAME)
-
-run: all
-	./$(NAME)
 
 clean:
 	rm -rf $(NAME)

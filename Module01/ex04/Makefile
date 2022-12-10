@@ -1,5 +1,5 @@
-NAME = brain
-SRC = main.cpp
+NAME = sed
+SRC = main.cpp file.cpp
 
 CC = g++
 CFLAGS = -Wall -Wextra -Werror
@@ -8,9 +8,6 @@ all: $(NAME)
 
 $(NAME): $(SRC)
 	$(CC) $(CFLAGS) $(SRC) -o $(NAME)
-
-run: all
-	./$(NAME)
 
 clean:
 	rm -rf $(NAME)
