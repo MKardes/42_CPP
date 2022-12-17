@@ -15,7 +15,9 @@ Fixed::Fixed( const int n )
 Fixed::Fixed( const float n )
 {
         std::cout << "Float constructer has been called." << std::endl;
-        this->setRawBits( std::round(n * (1 << this->bits)));
+        std::cout << "Ilk " << n << " <--> ";
+	this->setRawBits( std::roundf(n * (1 << this->bits)));
+	 std::cout << this-> getRawBits() << std::endl;
 }
 
 Fixed::Fixed( const Fixed& old )
@@ -46,10 +48,12 @@ void Fixed::setRawBits( int const raw )
 {
 	this->value = raw;
 }
-
+// 0000 0001 1000 0000
 float Fixed::toFloat( void ) const
 {
-	return ( this->getRawBits() / ( 1 << this->bits) );
+	std::cout << this->getRawBits() << std::endl;
+	std::cout << (float)(this->getRawBits() / ( 1 << this->bits)) << std::endl;
+	return (static_cast<float> (this->getRawBits() / ( 1 << this->bits)) );
 }
 
 int Fixed::toInt( void ) const
