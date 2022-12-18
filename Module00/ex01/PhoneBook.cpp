@@ -12,6 +12,19 @@ void get_field(std::string s)
 	}
 }
 
+int	check_is_num(std::string s)
+{
+	int	i = 0;
+
+	while (s[i])
+	{
+		if (std::isdigit(s[i]) == 0)
+			return (0);
+		i++;
+	}
+	return 1;
+}
+
 void	PhoneBook::add(void)
 {
 	std::string	s;
@@ -21,24 +34,24 @@ void	PhoneBook::add(void)
 	index = index % 8;
 	
 	std::cout << "Name: ";
-	std::cin >> s;
+	std::getline(std::cin, s);
 	contacts[index].set_name(s);
 
 	std::cout << "Surname: ";
-    	std::cin >> s;
-    	contacts[index].set_surname(s);
+	std::getline(std::cin, s);
+	contacts[index].set_surname(s);
 
 	std::cout << "Nickname: ";
-    	std::cin >> s;
-    	contacts[index].set_nickname(s);
+	std::getline(std::cin, s);
+	contacts[index].set_nickname(s);
     
 	std::cout << "Number: ";
-    	std::cin >> s;
-    	contacts[index].set_num(s);
+	std::getline(std::cin, s);
+	contacts[index].set_num(s);
 
 	std::cout << "Darkest Secret: ";
-    	std::cin >> s;
-    	contacts[index].set_secret(s);
+	std::getline(std::cin, s);
+	contacts[index].set_secret(s);
 	std::cout << std::endl;
 	
 	index++;
@@ -78,10 +91,15 @@ void	PhoneBook::search(void)
 	}
 	std::cout << "Index: ";
 	std::cin >> s;
+	if (check_is_num(s) == 0)
+	{
+		std::cout << "Invalid index!\n";
+		return ;
+	}
 	index = std::stoi(s, NULL, 10);
 	if (index < max)
 	{
-       		std::cout << "Name: " << contacts[index].get_name() << std::endl;
+       	std::cout << "Name: " << contacts[index].get_name() << std::endl;
 		std::cout << "Surname: " << contacts[index].get_surname() << std::endl;
 		std::cout << "Nickname: " << contacts[index].get_nickname() << std::endl;
 		std::cout << "Number: " << contacts[index].get_num() << std::endl;
@@ -90,4 +108,11 @@ void	PhoneBook::search(void)
 	else
 		std::cout << "Invalid index!\n";
 	std::cout << std::endl;
+	
+}
+
+PhoneBook::PhoneBook()
+{
+	this->index = 0;
+	this->list_chc = 0;
 }

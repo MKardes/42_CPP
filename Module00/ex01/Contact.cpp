@@ -15,9 +15,9 @@ void    Contact::set_nickname(std::string s)
 	this->nickname=s;
 }
 
-void    Contact::set_num(std::string n)
+void    Contact::set_num(std::string s)
 {
-	this->number=n;
+	this->number=s;
 }
 
 void    Contact::set_secret(std::string s)

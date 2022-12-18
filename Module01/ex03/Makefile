@@ -2,7 +2,7 @@ NAME = violence
 SRC = Weapon.cpp main.cpp HumanA.cpp HumanB.cpp
 
 CC = g++
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -W -std=c++98
 
 all: $(NAME)
 

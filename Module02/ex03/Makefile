@@ -1,13 +1,14 @@
-NAME = violence
-SRC = Weapon.cpp main.cpp HumanA.cpp HumanB.cpp
+NAME = fix
+SRC = Fixed.cpp main.cpp
+OBJ = $(SRC:.cpp=.o)
 
 CC = g++
-CFLAGS = -Wall -Wextra -Werror
+CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 
 all: $(NAME)
 
-$(NAME): $(SRC)
-	$(CC) $(CFLAGS) $(SRC) -o $(NAME)
+$(NAME): $(OBJ)
+	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
 
 clean:
 	rm -rf $(NAME)

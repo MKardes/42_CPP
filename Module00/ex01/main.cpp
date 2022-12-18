@@ -19,8 +19,6 @@ int main (void)
 			ph.add();
 		else if (s == "SEARCH")
 			ph.search();
-		else if (s[0] == '\n')
-			continue ;
 		else if (s == "EXIT")
 			break;
 		else

@@ -1,16 +1,16 @@
-#include <iostream>
+#include "Fixed.hpp"
 
-int main()
-{
-	char		s[] = "HI THIS IS BRAIN";
-	char		*stringPTR = s;
-
-	std::string	str = "HI THIS IS BRAIN";
-	std::string	&stringREF = str;
-
-	std::cout << "Ptr for stringPTR: " << &stringPTR << std::endl;
-	std::cout << "Ptr for stringREF: " << &stringREF << std::endl;
-
-	std::cout << "Value for stringPTR: " << stringPTR << std::endl;
-        std::cout << "Value for stringREF: " << stringREF << std::endl;
+int main( void ) {
+	Fixed a;
+	Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );
+	
+	std::cout << a << std::endl;
+	std::cout << ++a << std::endl;
+	std::cout << a << std::endl;
+	std::cout << a++ << std::endl;
+	std::cout << a << std::endl;
+	std::cout << b << std::endl;
+	
+	std::cout << Fixed::max( a, b ) << std::endl;
+	return 0;
 }

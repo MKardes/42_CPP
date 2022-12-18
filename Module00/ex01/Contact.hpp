@@ -16,9 +16,6 @@ class Contact
 		std::string	number;
 
 	public:
-	//	Contact();
-	//	virtual ~Contact();
-
 		void	set_name(std::string s);
 		void	set_surname(std::string s);
 		void  	set_nickname(std::string s);

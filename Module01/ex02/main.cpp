@@ -12,5 +12,5 @@ int main()
 	std::cout << "Ptr for stringREF: " << &stringREF << std::endl;
 
 	std::cout << "Value for stringPTR: " << stringPTR << std::endl;
-        std::cout << "Value for stringREF: " << stringREF << std::endl;
+    std::cout << "Value for stringREF: " << stringREF << std::endl;
 }

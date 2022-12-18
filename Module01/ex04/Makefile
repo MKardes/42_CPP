@@ -2,7 +2,7 @@ NAME = sed
 SRC = main.cpp file.cpp
 
 CC = g++
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -W -std=c++98
 
 all: $(NAME)
 

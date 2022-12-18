@@ -3,14 +3,14 @@
 
 int main()
 {
-	Zombie *a = newZombie("Musab");
-	Zombie *b = newZombie("Hafsa");
-	Zombie *c = newZombie("Apo");
+	Zombie *a = newZombie("Jhon");
+	Zombie *b = newZombie("Hasan");
+	Zombie *c = newZombie("Hans");
 
 	a->announce();
 	b->announce();
 	c->announce();
-	randomChump("Gulcin");
+	randomChump("Harun");
 	delete a;
 	delete b;
 	delete c;
