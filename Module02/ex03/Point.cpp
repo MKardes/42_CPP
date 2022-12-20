@@ -14,7 +14,7 @@ Point::Point( const Point& src ): x(src.x), y(src.y)
 
 Point::~Point( void )
 {
-    std::cout << "Point destroyed" << std::endl;
+  //  std::cout << "Point destroyed" << std::endl;
 }
 
 Point& Point::operator=( const Point& src )

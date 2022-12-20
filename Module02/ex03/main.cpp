@@ -1,16 +1,19 @@
 #include "Point.hpp"
 
 int main( void ) {
-	Fixed a;
-	Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );
-	
-	std::cout << a << std::endl;
-	std::cout << ++a << std::endl;
-	std::cout << a << std::endl;
-	std::cout << a++ << std::endl;
-	std::cout << a << std::endl;
-	std::cout << b << std::endl;
-	
-	std::cout << Fixed::max( a, b ) << std::endl;
+	/*
+	Point	a( 0.1f, -1 );
+	Point	b( 3,  0 );
+	Point	c( 2,  3 );
+	Point	p( 0.1f,  -1 );
+	if (bsp (a, b, c, p))
+		std::cout << "İçinde";
+	else
+		std::cout << "Maalesef";*/
+    if ( bsp( Point(0, 0), Point(10, 30), Point(20, 0), Point(30, 15) ) == true ) {
+        std::cout << "Point is in the triangle" << std::endl;
+    } else {
+        std::cout << "Point is not in the triangle" << std::endl;
+    }
 	return 0;
 }
