@@ -16,34 +16,18 @@
 
 int main()
 {
-    ClapTrap a("Musab");
-    ClapTrap b("Hans");
-    ScavTrap c("Derived");
-    FragTrap d("highFive");
+    DiamondTrap has( "Hasan" );
+    DiamondTrap hasr( has );
+    DiamondTrap han("Hans");
 
-    a.attack("Hans");
-    b.takeDamage(3);
-    a.beRepaired(3);
-    c.attack("Musab");
-    c.takeDamage(45);
-    c.beRepaired(10);
-    c.attack("Musab");
-    c.takeDamage(25);
-    c.guardGate();
-    d.highFivesGuys();
+    has.whoAmI();
+    hasr.whoAmI();
+    han = hasr;
+    han.whoAmI();
 
-    DiamondTrap ash( "Ash" );
-    DiamondTrap ash2( ash );
-    DiamondTrap ash3(".");
-
-    ash.whoAmI();
-    ash2.whoAmI();
-    ash3 = ash;
-    ash3.whoAmI();
-
-    ash.attack( "the air" );
-    ash.takeDamage( 10 );
-    ash.beRepaired( 10 );
+    has.attack( "the air" );
+    has.takeDamage( 25 );
+    has.beRepaired( 10 );
 
     return 0;
 }
