@@ -1,5 +1,5 @@
-NAME = fix
-SRC = Fixed.cpp main.cpp Point.cpp bsp.cpp
+NAME = FragTrap
+SRC = ClapTrap.cpp main.cpp ScavTrap.cpp FragTrap.cpp
 OBJ = $(SRC:.cpp=.o)
 
 CC = g++

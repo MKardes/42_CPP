@@ -2,24 +2,24 @@
 
 Fixed::Fixed(void)
 {
-	std::cout << "Default constructer has been called." << std::endl;
+	std::cout << "Default constructer called." << std::endl;
 	this->value = 0;
 }
 
 Fixed::Fixed(const Fixed& old)
 {
-	std::cout << "Copy constructer has been called." << std::endl;
+	std::cout << "Copy constructer called." << std::endl;
 	this->setRawBits(old.getRawBits());
 }
 
 Fixed::~Fixed(void)
 {
-	std::cout << "Destructer has been called." << std::endl;
+	std::cout << "Destructer called." << std::endl;
 }
 
 Fixed& Fixed::operator=(const Fixed& t)
 {
-	std::cout << "Copy assignment operator has been called" << std::endl;
+	std::cout << "Copy assignment operator called" << std::endl;
 	if (this != &t)
 		this->value = t.getRawBits();
 	return *this;
