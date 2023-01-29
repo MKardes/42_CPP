@@ -1,30 +1,28 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: mkardes <mkardes@student.42kocaeli.com.tr  +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/21 15:34:52 by mkardes           #+#    #+#             */
-/*   Updated: 2022/12/21 15:34:54 by mkardes          ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
+#include "Dog.hpp"
+#include "Cat.hpp"
 
-#include "ScavTrap.hpp"
+/* int main()
+{
+	Dog a;
+	Dog b(a);
+	a = b;
 
+	Cat c;
+	Cat d(c);
+	c = d;
+
+	a.makeSound();
+	c.makeSound();
+	b.makeSound();
+	d.makeSound();
+} */
 int main()
 {
-    ClapTrap a("Musab");
-    ClapTrap b("Hans");
-    ScavTrap c("Derived");
-
-    a.attack("Hans");
-    b.takeDamage(3);
-    a.beRepaired(3);
-    c.attack("Musab");
-    c.takeDamage(45);
-    c.beRepaired(10);
-    c.attack("Musab");
-    c.takeDamage(25);
-    c.guardGate();
+const Animal* j = new Dog();
+const Animal* i = new Cat();
+j->makeSound();
+i->makeSound();
+delete j;//should not create a leak
+delete i;
+return 0;
 }
