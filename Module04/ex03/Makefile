@@ -1,5 +1,5 @@
-NAME = DiamondTrap
-SRC = ClapTrap.cpp main.cpp ScavTrap.cpp FragTrap.cpp DiamondTrap.cpp
+NAME = Material
+SRC = AMateria.cpp Ice.cpp Cure.cpp main.cpp
 OBJ = $(SRC:.cpp=.o)
 
 CC = g++

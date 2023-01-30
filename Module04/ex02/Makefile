@@ -1,5 +1,5 @@
-NAME = FragTrap
-SRC = ClapTrap.cpp main.cpp ScavTrap.cpp FragTrap.cpp
+NAME = animal
+SRC = Animal.cpp Dog.cpp Cat.cpp main.cpp Brain.cpp
 OBJ = $(SRC:.cpp=.o)
 
 CC = g++
