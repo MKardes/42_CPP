@@ -21,6 +21,7 @@ Dog::~Dog()
 Dog& Dog::operator=(const Dog& t)
 {
 	this->type = t.type;
+	delete this->brain;
 	this->brain = new Brain(*t.brain);
 	std::cout << "Dog assigned" << std::endl;
 	return *this;

@@ -21,6 +21,7 @@ Cat::~Cat()
 Cat& Cat::operator=(const Cat& t)
 {
 	this->type = t.type;
+	delete this->brain;
 	this->brain = new Brain(*t.brain);
 	std::cout << "Cat assigned" << std::endl;
 	return *this;
