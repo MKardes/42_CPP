@@ -6,7 +6,7 @@
 /*   By: mkardes <mkardes@student.42kocaeli.com.tr  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 16:16:40 by mkardes           #+#    #+#             */
-/*   Updated: 2023/02/09 19:36:50 by mkardes          ###   ########.fr       */
+/*   Updated: 2023/02/10 19:19:26 by mkardes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,12 +66,12 @@ int     Bureaucrat::getGrade(void) const
 
 const char *Bureaucrat::GradeTooHighException::what() const _NOEXCEPT
 {
-	return ("Grade baya high karşim");
+	return ("Grade is too HIGH!");
 }
 
 const char *Bureaucrat::GradeTooLowException::what() const _NOEXCEPT
 {
-    return ("Grade baya low karşim");
+    return ("Grade is too LOW!");
 }
 
 void	Bureaucrat::gradeUp(void)
