@@ -4,7 +4,7 @@
 int	main()
 {
 	{
-		std::cout << "-----------Test 1-----------" << std::endl;
+		std::cout << std::endl << "-----------Test 1-----------" << std::endl;
 		try
 		{
 			Form a("Work1", 20, 45);
@@ -15,11 +15,11 @@ int	main()
 		}
 		catch (std::exception & e)
 		{
-			std::cerr << e.what();
+			std::cerr << e.what() << std::endl;
 		}
 	}
 	{
-        std::cout << "-----------Test 2-----------" << std::endl;
+        std::cout << std::endl << "-----------Test 2-----------" << std::endl;
         try
         {
 			Bureaucrat	a("Musab", 35);
@@ -33,11 +33,11 @@ int	main()
         }
         catch (std::exception & e)
         {
-            std::cerr << e.what();
+            std::cerr << e.what() << std::endl;
         }
     }
 	{
-		std::cout << "-----------Test 3-----------" << std::endl;
+		std::cout << std::endl << "-----------Test 3-----------" << std::endl;
 		try
 		{
 			Bureaucrat	a("Musab", 1);
@@ -53,7 +53,29 @@ int	main()
 		}
 		catch (std::exception & e)
 		{
-			std::cerr << e.what();
+			std::cerr << e.what() << std::endl;
 		}
 	}
+	{
+        std::cout << std::endl << "-----------Test 4-----------" << std::endl;
+        try
+        {
+            Form f1("Work 1", -1, 50);
+        }
+        catch (std::exception & e)
+        {
+            std::cerr << e.what() << std::endl;
+        }
+    }
+	{
+        std::cout << std::endl << "-----------Test 5-----------" << std::endl;
+        try
+        {
+            Form f1("Work 1", 20, 250);
+        }
+        catch (std::exception & e)
+        {
+            std::cerr << e.what() << std::endl;
+        }
+    }
 }

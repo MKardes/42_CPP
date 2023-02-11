@@ -6,10 +6,10 @@ void	cpp_create(char *str, char *cpp)
 {
 	FILE * fd = fopen(cpp, "wr");
 	fprintf(fd, "#include \"%s.hpp\"\n\n",str);
-	fprintf(fd, "%s::%s()\n{\n\tstd::cout << \"%s has been constructed.\";\n}\n",str,str,str);
-	fprintf(fd, "\n%s::%s(const %s & copy)\n{\n\t*this = copy;\n\tstd::cout << \"%s's copy constructer called.\";\n}\n", str, str, str, str);
-	fprintf(fd, "\n%s::~%s()\n{\n\tstd::cout << \"%s has been destructed.\";\n}\n",str,str,str);
-	fprintf(fd, "\n%s &%s::operator=(const %s & copy)\n{\n\t(void)copy;\n\tstd::cout << \"%s's copy assignment called.\";\n}\n",str,str,str,str);
+	fprintf(fd, "%s::%s()\n{\n\tstd::cout << \"%s has been constructed.\" << std::endl;\n}\n",str,str,str);
+	fprintf(fd, "\n%s::%s(const %s & copy)\n{\n\t*this = copy;\n\tstd::cout << \"%s's copy constructer called.\" << std::endl;\n}\n", str, str, str, str);
+	fprintf(fd, "\n%s::~%s()\n{\n\tstd::cout << \"%s has been destructed.\" << std::endl;\n}\n",str,str,str);
+	fprintf(fd, "\n%s &%s::operator=(const %s & copy)\n{\n\t(void)copy;\n\tstd::cout << \"%s's copy assignment called.\" << std::endl;\n\treturn *this;\n}\n",str,str,str,str);
 	fclose(fd);
 }
 
