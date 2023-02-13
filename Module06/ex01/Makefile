@@ -1,5 +1,5 @@
-NAME = bureaucrat
-SRC = main.cpp Bureaucrat.cpp AForm.cpp ShrubberyCreationForm.cpp RobotomyRequestForm.cpp PresidentialPardonForm.cpp Intern.cpp
+NAME = convert
+SRC = main.cpp Converter.cpp
 OBJ = $(SRC:.cpp=.o)
 
 CC = g++

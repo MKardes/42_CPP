@@ -15,6 +15,9 @@ class ShrubberyCreationForm: public AForm
 		ShrubberyCreationForm &operator=(const ShrubberyCreationForm & copy);
 
 		void	execute(Bureaucrat const & executor) const;
+
+		NaN
+
 };
 
 #endif
