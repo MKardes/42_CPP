@@ -1,5 +1,5 @@
-NAME = convert
-SRC = main.cpp Converter.cpp
+NAME = serialization
+SRC = main.cpp
 OBJ = $(SRC:.cpp=.o)
 
 CC = g++

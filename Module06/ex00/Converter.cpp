@@ -44,24 +44,36 @@ void	Converter::toInt(int num)
 void Converter::toFloat(float f)
 {
 	int ch = f;
-    if (ch > 127 || ch < 32)
-        ch = -1;
-
 	float nb = f;
+
+    if (ch > 127 || ch < 32)
+	{
+        ch = -1;
+	}
+	
     if (nb > 2147483647 || nb < -2147483648)
+	{
         ch = -2;
+	}
+
 	Converter::printer(ch, f, f, f);
 }
 
 void Converter::toDouble(double d)
 {
 	int ch = d;
-    if (ch > 127 || ch < 32)
-        ch = -1;
-
 	double nb = d;
+
+    if (ch > 127 || ch < 32)
+    {
+		ch = -1;
+	}
+
 	if (nb > 2147483647 || nb < -2147483648)
+	{
 		ch = -2;
+	}
+
 	Converter::printer(ch, d, d, d);
 }
 
@@ -129,12 +141,9 @@ void	Converter::convert(std::string str)
 	
 	if (Converter::infinite_non_check(str))
 		return ;
-	if (cstr[1] == '\0')
+	if (cstr[1] == '\0' && !(cstr[0] >= '0' && cstr[0] <= '9'))
 	{
-		if (cstr[0] > '9' || cstr[0] < '0')
-			Converter::printer(-3, 0, 0, 0);
-		else
-			Converter::toChar(cstr[0] - 48);
+		Converter::toChar(cstr[0]);
 		return ;
 	}
 	int i = 0;

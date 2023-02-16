@@ -2,7 +2,7 @@
 # define CONVERTER_HPP
 
 # include <iostream>
-# include <cctype>
+# include <string>
 
 class Converter
 {

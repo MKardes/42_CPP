@@ -1,12 +1,9 @@
-#include "Converter.hpp"
-
-int	main(int ac, char **av)
+#include <iostream>
+int main()
 {
-	if (ac != 2)
-	{
-		std::cout << "Incorrect argument count!!" << std::endl;
-		return (0);
-	}
-	std::string str(av[1]);
-	Converter::convert(str);
+    int i = 10;
+    void* v = static_cast<void*>(&i);
+    int* ip = static_cast<int*>(v);
+	(void)ip;
+    return 0;
 }
