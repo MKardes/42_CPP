@@ -1,5 +1,5 @@
-NAME = serialization
-SRC = main.cpp Serializer.cpp
+NAME = typefind
+SRC = main.cpp 
 OBJ = $(SRC:.cpp=.o)
 
 CC = g++
