@@ -1,5 +1,5 @@
-NAME = easyfind
-SRC = main.cpp 
+NAME = span
+SRC = main.cpp Span.cpp
 OBJ = $(SRC:.cpp=.o)
 
 CC = g++

@@ -2,14 +2,17 @@
 # define EASYFIND_HPP
 
 # include <iostream>
-# include <array>
-# include <tuple>
+# include <algorithm>
+# include <vector>
+# include <list>
 
-template <typename T>
-void    easyfind(T & a, int x)
+template < typename T >
+void    easyfind( T& container, int value )
 {
-    std::cout << a.at(3) << " "<< x << std::endl;
-    std::iterator it = std::find(a.begin(), a.end(), x);
+    if ( std::find( container.begin(), container.end(), value ) != container.end() )
+        std::cout << "Found." << std::endl;
+    else
+        std::cout << "Not found." << std::endl;
 }
 
 #endif /* EASYFIND_HPP */
