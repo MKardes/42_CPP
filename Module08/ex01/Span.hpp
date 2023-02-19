@@ -23,6 +23,10 @@ class Span
 		int		shortestSpan();
 		int		longestSpan();
 
+		void	change()
+		{
+			this->_data.pop_back();
+		}
 		std::vector<int> &getData()
 		{
 			return (_data);

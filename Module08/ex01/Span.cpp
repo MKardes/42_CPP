@@ -14,6 +14,13 @@ Span::Span(const Span & copy)
 	*this = copy;
 }
 
+Span &Span::operator=(const Span & copy)
+{
+	this->_size = copy._size;
+	this->_data = copy._data;
+	return *this;
+}
+
 Span::~Span()
 {
 }
@@ -66,12 +73,6 @@ int	Span::longestSpan()
 	
 	tmp.erase(tmp.begin(), tmp.end());
 	return (result);
-}
-
-Span &Span::operator=(const Span & copy)
-{
-	(void)copy;
-	return *this;
 }
 
 const char *Span::OutOfRangeException::what() const throw()
