@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Span.hpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mkardes <mkardes@student.42kocaeli.com.tr  +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/02/20 11:08:43 by mkardes           #+#    #+#             */
+/*   Updated: 2023/02/20 11:08:44 by mkardes          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef SPAN_HPP
 # define SPAN_HPP
 
@@ -22,15 +34,8 @@ class Span
 		void	addNumbers(std::vector<int>::iterator begin, std::vector<int>::iterator end);
 		int		shortestSpan();
 		int		longestSpan();
-
-		void	change()
-		{
-			this->_data.pop_back();
-		}
-		std::vector<int> &getData()
-		{
-			return (_data);
-		}
+		
+		std::vector<int> &getData();
 
 		class	OutOfRangeException: public std::exception
 		{

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Span.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mkardes <mkardes@student.42kocaeli.com.tr  +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/02/20 11:08:37 by mkardes           #+#    #+#             */
+/*   Updated: 2023/02/20 11:08:38 by mkardes          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Span.hpp"
 
 Span::Span(): _size(0)
@@ -73,6 +85,11 @@ int	Span::longestSpan()
 	
 	tmp.erase(tmp.begin(), tmp.end());
 	return (result);
+}
+
+std::vector<int> &Span::getData()
+{
+	return (_data);
 }
 
 const char *Span::OutOfRangeException::what() const throw()
