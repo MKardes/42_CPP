@@ -33,6 +33,7 @@ void	PhoneBook::add(void)
 		this->list_chc = 1;
 	index = index % 8;
 	
+	std::getline(std::cin, s);
 	std::cout << "Name: ";
 	std::getline(std::cin, s);
 	contacts[index].set_name(s);
